@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPF_XML.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_XML"
+        mc:Ignorable="d"
+        Title="XML" Height="450" Width="800">
+
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <TextBlock Grid.Row="0" Grid.Column="0"  Text="XML File" Margin="3,25,724,59" />
+            <TextBox  Grid.Row="0"  x:Name="txtPathFile" AllowDrop="True" Margin="54,24,10,58"  Text="{Binding XMLPathFile}"/>
+            <TextBlock Grid.Column="0" Text="XPath" Margin="3,49,724,35" />
+            <TextBox x:Name="txtXPath" Margin="54,48,10,34" Text="{Binding XMLPath}" />
+            <Button Content="Process" Command="{Binding Path=XMLProcessCommand}" Margin="346,71,346,9" />
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="304" Margin="10,115,0,0" VerticalAlignment="Top" Width="772">
+            <TextBox Grid.Row="0" IsReadOnly="True" Name="Result" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"  Text="{Binding Result}" Margin="0,0,10,0"/>
+        </Grid>
+    </Grid>
+
+</Window>
